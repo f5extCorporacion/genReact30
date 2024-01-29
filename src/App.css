@@ -1,14 +1,15 @@
 :root{
-  font-family: 'Lexend Deca', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Roboto Condensed', sans-serif;
+--font-lexend: 'Lexend Deca', sans-serif;
+--font-opens: 'Open Sans', sans-serif;
+--font-poppins: 'Poppins', sans-serif;
+--font-roboto: 'Roboto Condensed', sans-serif;
+--font-poor: 'Poor Story', system-ui;
 
 }
 body{
   margin: 0;
   padding: 0;
-  min-width: 300px;
+ 
 }
 
 *{
@@ -16,15 +17,15 @@ body{
   margin: 0;
 }
 body{
-  background: rgb(34,193,195);
-  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);  width: 100%;
-  height: 100hv;
+  background: rgb(246,9,113);
+  background:url('https://i.gifer.com/IrF.gif');
+   height: 100hv;
 }
 #root{
   margin: 0;
 padding: 0;
 }
-.ap{
+.app{
  display: flex;
  justify-content:center;
  align-items: center;
@@ -35,30 +36,70 @@ padding: 0;
  gap: 1rem;
 
 }
-.lemale img{
-  width: 200px;
-  height: 200px;
-  top: -10px;
+.ap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+.lemale img{
+  width: 130px;
+  height: 130px;
+  top: -10px;
+ animation: mintos 4s linear infinite;
+}
+@keyframes mintos {
+  from {
+    transform: rotate(0deg);
+    animation-delay: 2s;
+    
+  }
+  to {
+    transform: rotate(360deg);
+    animation-delay: 4s;
+   
+  }
+} 
+
 .app .frase {
   width: 90%;
   background: #fff;
-  height: 250px;
   border-radius: 20px;
   opacity: 0.8;
+  padding: 1rem;
+  animation: tenes 4s linear infinite ;
 }
 .app .frase .item{
   padding: 1rem;
   align-items: center;
   justify-content: center;
+  border: 1px solid #b3acac;
+  border-radius: 10px;
+  gap: 10px;
+  font-family: var(--font-lexend);
 }
+@keyframes tenes {
+  0%{
+    transform: translateY(1px);
+    animation-delay: 2s;
+  }
+  50% {
+    transform: translateY(-5px);
+    animation-delay: 4s;
+  }
+  100%{
+    
+    transform: translateY(2px);
+  }
+} 
 .app button{
-  background: #e1ac01;
+  background: transparent;
   padding: 1rem;
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 15px;
   color: #fff;
-  box-shadow: 10px 10px 10px #1c1c1c;
+  box-shadow: 10px 10px 10px #a09e9e;
+  font-family: var(--font-poppins);
 }
 .app button:hover{
   background: #57ec01;
@@ -66,29 +107,32 @@ padding: 0;
   border-radius: 20px;
   font-size: 15px;
   color: #fff;
-  box-shadow: 10px 10px 10px #1c1c1c;
+  box-shadow: 10px 10px 10px #9d9c9c;
+  animation: tenes 4s linear ;
+  opacity: 0.8;
 }
 @media (min-width: 600px) {
   body{
     background: rgb(246,9,113);
-    background: radial-gradient(circle, rgba(246,9,113,1) 0%, rgba(2,16,33,1) 100%); height: 100hv;
+    background:url('https://i.gifer.com/IrF.gif');
+     height: 100hv;
   }
-  .ap{
+  .app{
     display: flex;
     justify-content:center;
     align-items: center;
     flex-direction: column;
-    width: 400px;
+    flex-wrap: wrap;
     padding: 1rem;
     top: -10px;
     gap: 1rem;
-    transform: translateX(-10px);
+   
    }
-   .app{
+   .ap{
     display: flex;
-    padding: 1rem;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 10px;
   }
-  /* … */
 }
